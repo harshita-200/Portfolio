@@ -253,6 +253,21 @@ button:hover{
     text-shadow: -4px 0px brown;
 
 }
+@media screen and (max-width:500px){
+    .container img{
+        height:400px;
+        width: 300px;
+    }
+    #about .more h5{
+        font-size: 5vh;
+    }
+    .exp .asso h2{
+        font-size: 5vh;
+    }
+    .exp .edu h2{
+        font-size: 5vh;
+    }
+}
 #about .more p{
     font-size: 100%;
 }
