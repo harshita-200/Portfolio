@@ -203,6 +203,18 @@ button:hover{
         grid-template-columns:auto;
     }
     }
+@media screen and (max-width:515px)
+{
+    .container img{
+        margin-left: 10%;
+        height: 500px;
+        width: 380px;
+    }
+    #intro{
+        font-size:100%;
+        margin-top:0;
+    }
+}
 /* -----------------about------------------- */
 #about .more{
     color: var(--third-color);
@@ -226,6 +238,11 @@ button:hover{
 @media screen and (max-width:930px){
     #skill .dis{
         grid-template-columns:repeat(1,1fr);
+    }
+    #about .contain{
+        grid-template-columns: 1fr;
+        font-size: medium;
+        padding: 2vh;
     }
 }
 #about .more h5{
@@ -444,11 +461,11 @@ button:hover{
 }
 @media screen and (max-width:910px){
     #projects .boxes img{
-        width: 110%;
+        width: 130%;
         height: 35vh;
     }
     #code .con img{
-        width: 100%;
+        width: 95%;
         height: 35vh;
     }
 }
@@ -496,6 +513,7 @@ button:hover{
     display:grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 6vh;
+    padding: 3vh;
 }
 #code .boxes{
     margin: 5vh;
@@ -516,7 +534,7 @@ button:hover{
     padding: 1vh;
 }
 #code .bo p{
-    font-size: xx-large;
+    font-size: 110%;
     padding: 4vh;
 }
 #code .bo a{
