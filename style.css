@@ -225,7 +225,6 @@ button:hover{
 .contain img{
     width: 15vh;
     height: 15vh;
-    padding-top: 3vh;
 }
 }
 @media screen and (max-width:1430px){
@@ -267,8 +266,9 @@ button:hover{
 }
 .contain{
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr;
     justify-content: space-evenly;
+    padding: 3vh 3vh;
 }
 .imgi{
     width: fit-content;
