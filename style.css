@@ -1,7 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    width: auto;
     box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 :root{
     --primary-color:black;
@@ -32,13 +40,10 @@ html{
     color: brown;
 }
 .container{
-       height:fit-content;
-       background-image: url(https://wallpapercave.com/w/BMrmUGk);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-position-x: center;
-        padding-top: 5vh;
+       height:100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    padding-top: 5vh;
 }
 .navbar ul{
     overflow:auto;
@@ -88,7 +93,7 @@ input:checked~#sun{
     padding-top: 10px;
     display: none;
 }
-@media (max-width: 858px){
+@media (max-width:1300px){
     .checkbtn{
         display: block;
     }
@@ -116,9 +121,6 @@ input:checked~#sun{
     #check:checked~ul{
         left: 0;
     }
-    #home #intro{
-        font-size: 94%;
-    }
 
 }
 #sun{
@@ -145,25 +147,24 @@ body{
 }
 
 .container img{
-    width:31%;
-    height: 85%;
-    margin-left:8%;
-    margin-top: 3%;
+    width:405px;
+    height: 555px;
+    margin-left:18%;
+    margin-top: 10%;
     border:10px solid antiquewhite;
     box-shadow: 8px 8px 10px brown;
-    display: inline-block;
     
 }
 
 .container button{
     background-color:rgb(205, 20, 20);
-    height: 60%;
+    height: 10%;
     border-radius: 22px;
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 20%;
     font-size:110%;
     cursor: pointer;
-    padding: 1% 5%;
+    padding: 1% 3%;
 
 }
 button:hover{
@@ -178,12 +179,8 @@ button:hover{
 }
 #intro{
     color: var(--third-color);
-    margin-left: 10%;
-    margin-top: 18%;
+    margin-top: 30%;
     font-size:180%;
-    display: inline-block;
-    width: auto;
-    position: absolute;
 }
 #intro h5{
     margin-bottom: 3%;
@@ -193,30 +190,43 @@ button:hover{
     color: brown;
     font-style:italic;
 }
+@media screen and (max-width:1340px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+    }
+    #intro{
+        margin-top: 0;
+        margin-left: 16%;
+    }
+    #about .exp{
+        grid-template-columns:auto;
+    }
+    }
 /* -----------------about------------------- */
 #about .more{
-    position:absolute;
     color: var(--third-color);
     font-size:x-large;
-     display: inline-block;
-     width: auto;
-     z-index: 0.2;
-     padding: 0vh 2vh;
      height: fit-content;
 }
-@media (max-width: 858px){
-#about .exp{
-    grid-template-columns:auto;
+@media screen and (max-width: 1300px){
+.contain img{
+    width: 20vh;
+    height: 20vh;
 }
+}
+@media screen and (max-width:1430px){
 #skill .dis{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 }
-#projects .con{
-    grid-template-columns: 1fr;
+#skill .box{
+    margin: 0vh;
 }
-#code .con{
-    grid-template-columns: 1fr;
 }
+@media screen and (max-width:930px){
+    #skill .dis{
+        grid-template-columns:repeat(1,1fr);
+    }
 }
 #about .more h5{
     padding: 2rem 0rem;
@@ -227,15 +237,24 @@ button:hover{
 
 }
 #about .more p{
-    font-size: 80%;
+    font-size: 100%;
 }
 #about .contain img{
      display: inline-block;
-      width:20%;
-      height:40vh;
+      width:120%;
+      height:120%;
       border-radius: 50%;
    color: blanchedalmond;
    padding:4vh;
+}
+.contain{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    justify-content: space-evenly;
+}
+.imgi{
+    width: fit-content;
+    height: fit-content;
 }
 #about{
     background-color:var(--primary-color);
@@ -391,7 +410,8 @@ button:hover{
 .proj{
     color:var(--third-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 .con{
@@ -401,13 +421,36 @@ button:hover{
 }
 #projects .boxes{
    
-    margin: 5vh;
+    margin:5vh;
     border-radius: 1vh;
 }
 .boxes img{
     box-shadow:0px 5px 10px 0px  var(--secondary-color);
     height: 40vh;
     padding: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+@media screen and (max-width:1935px){
+    #projects .con{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2rem 50px;
+    }
+    #code .con{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (max-width:910px){
+    #projects .boxes img{
+        width: 110%;
+        height: 35vh;
+    }
+    #code .con img{
+        width: 100%;
+        height: 35vh;
+    }
 }
 .boxes:hover{
     transform: scale(1.05);
@@ -488,7 +531,7 @@ button:hover{
     color: rgb(52, 146, 228);
 }
 .s{
-    padding-left: 20vh;
+    padding-left: 20%;
     font-size: large;
     margin: 2vh 0vh;
     display: inline-flex;
@@ -503,16 +546,24 @@ button:hover{
     transform: scale(1.05);
 }
 .s #search{
-    width: 40vh;
+    width: 35vh;
+}
+.footercon{
+    width: 100%;
 }
 footer{
     margin-top: 5vh;
-    width: 100%;
     background-color:var(--r);
     text-align: center;
     padding-top: 4vh;
     color: var(--secondary-color);
     letter-spacing: 0.4vh;
+}
+html {
+    display: block;
+}
+.hydrated{
+    visibility: inherit;
 }
 .credit{
     padding: 3vh 0vh;
@@ -521,14 +572,15 @@ footer{
     padding-bottom: 1vh;
 }
 .social{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     display: inline-block;
 }
 .icons{
     padding: 0vh 5vh;
     display: inline-block;
-    width:20vh;
+    width:15%;
 }
 .icons a{
     text-decoration: none;
